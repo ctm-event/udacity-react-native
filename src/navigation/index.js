@@ -1,8 +1,8 @@
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
-import Customer from '../features/Customer'
-import Notification from '../features/Notification'
-import Setting from '../features/Setting'
+import Customer from './screens/customers/Customer'
+import Notification from './screens/Notification'
+import Setting from './screens/Setting'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 

@@ -1,10 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { NavigationContainer } from '@react-navigation/native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import SelectRegion from './SelectRegion'
-import RegionStacks from './RegionStacks'
 import NewCustomer from '../../../features/customer/New'
+import RegionStacks from './Stack'
 
 const Tab = createBottomTabNavigator()
 
@@ -16,7 +14,7 @@ const Navigation = () => {
         tabBarIcon: ({ focused, size, color }) => {
           let iconName
 
-          if (route.name === 'Customers') {
+          if (route.name === 'Regions') {
             iconName = 'people'
           } else if (route.name === 'Add') {
             iconName = focused ? 'person-add' : 'person-add-outline'
@@ -29,7 +27,9 @@ const Navigation = () => {
         headerShown: false
       })}
     >
-      <Tab.Screen name="Customers" component={RegionStacks} />
+      <Tab.Screen name="Regions" component={RegionStacks} options={{
+        tabBarLabel: 'List'
+      }} />
       <Tab.Screen name="Add" component={NewCustomer} />
     </Tab.Navigator>
     // <NavigationContainer>

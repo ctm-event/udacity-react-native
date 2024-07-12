@@ -4,9 +4,12 @@ import { useSelector } from 'react-redux'
 import ListCustomer from '../../../features/customer/List'
 import GlobalStyles from '../../../styles'
 import SelectRegion from './SelectRegion'
+import { ListRegion } from '../../../constants/region'
+import EditCustomer from '../../../features/customer/Edit'
+
 const Stack = createNativeStackNavigator()
 
-const RegionStacks = () => {
+const Stacks = () => {
   const { list } = useSelector((state) => state.customer)
 
   return (
@@ -14,17 +17,32 @@ const RegionStacks = () => {
       <Stack.Screen
         name={'Select Region'}
         component={SelectRegion}
+        options={{
+          gestureEnabled: true
+        }}
       />
-      {list.length !== 0 &&
-        list.map((item) => (
+      {ListRegion.length > 0 &&
+        ListRegion.map((region) => (
           <Stack.Screen
-            key={item.id}
-            name={`${item.id} - ${item.name}`}
+            key={region}
+            name={region}
             component={ListCustomer}
+            initialParams={{ region }}
+            options={{
+              gestureEnabled: true
+            }}
+            gestureEnabled={true}
           />
         ))}
+      <Stack.Screen
+        name={'Edit Customer'}
+        component={EditCustomer}
+        options={{
+          gestureEnabled: true
+        }}
+      />
     </Stack.Navigator>
   )
 }
 
-export default RegionStacks
+export default Stacks

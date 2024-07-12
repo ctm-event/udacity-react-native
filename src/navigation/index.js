@@ -1,6 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { NavigationContainer } from '@react-navigation/native'
-import Customer from './screens/customers/Customer'
+import CustomerBottomTab from './screens/customers/BottomTab'
 import Notification from './screens/Notification'
 import Setting from './screens/Setting'
 
@@ -22,7 +22,7 @@ const DrawerNavigation = () => {
       >
         <Drawer.Screen
           name="Customer"
-          component={Customer}
+          component={CustomerBottomTab}
           options={{
             title: 'Customer',
             drawerIcon: ({ focused, size }) => (

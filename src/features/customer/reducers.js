@@ -9,11 +9,23 @@ const slice = createSlice({
   initialState: initialState,
   reducers: {
     addCustomer: (state, { payload }) => {
-      state.list = [...state.list, payload]
+      state.list = [
+        ...state.list,
+        {
+          ...payload,
+          id: Date.now().toString()
+        }
+      ]
+    },
+    updateCustomer: (state, { payload }) => {
+      state.list = state.list.map((customer) => {
+        if (customer.id === payload.id) return payload
+        return customer
+      })
     }
   }
 })
 
-export const { addCustomer } = slice.actions
+export const { addCustomer, updateCustomer } = slice.actions
 
 export default slice.reducer

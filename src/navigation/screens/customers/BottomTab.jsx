@@ -32,8 +32,6 @@ const Navigation = () => {
       }} />
       <Tab.Screen name="Add" component={NewCustomer} />
     </Tab.Navigator>
-    // <NavigationContainer>
-    // </NavigationContainer>
   )
 }
 

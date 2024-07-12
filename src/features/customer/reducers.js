@@ -8,14 +8,20 @@ const slice = createSlice({
   name: 'customer',
   initialState: initialState,
   reducers: {
-    addCustomer: (state, { payload }) => {
-      state.list = [
-        ...state.list,
-        {
-          ...payload,
-          id: Date.now().toString()
-        }
-      ]
+    createCustomer: () => {
+      // Delegate to saga for handling this duty
+    },
+    createCustomerResult: (state, { payload }) => {
+      state.list = payload
+    },
+    createCustomerError: (state, { payload }) => {
+      console.log(payload)
+    },
+    loadCustomers: () => {
+      // Delegate to saga for handling this duty
+    },
+    loadCustomersResult: (state, { payload }) => {
+      state.list = payload
     },
     updateCustomer: (state, { payload }) => {
       state.list = state.list.map((customer) => {
@@ -26,6 +32,13 @@ const slice = createSlice({
   }
 })
 
-export const { addCustomer, updateCustomer } = slice.actions
+export const {
+  createCustomer,
+  createCustomerResult,
+  createCustomerError,
+  loadCustomers,
+  loadCustomersResult,
+  updateCustomer
+} = slice.actions
 
 export default slice.reducer

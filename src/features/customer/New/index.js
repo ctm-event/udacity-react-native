@@ -6,7 +6,7 @@ import {
 } from 'react-native'
 import { useDispatch } from 'react-redux'
 import CustomerForm from '../../../components/CustomerForm'
-import { addCustomer } from '../reducers'
+import { addCustomer, createCustomer } from '../reducers'
 import formStyles from './styles'
 
 const NewCustomner = () => {
@@ -15,8 +15,10 @@ const NewCustomner = () => {
   const styles = StyleSheet.create(formStyles())
 
   const onSubmit = (formData) => {
-    dispatch(addCustomer(formData))
-    navigate('Select Region')
+    console.log('dispatch(createCustomer())')
+    dispatch(createCustomer(formData))
+    // dispatch(addCustomer(formData))
+    // navigate('Select Region')
   }
 
   return (

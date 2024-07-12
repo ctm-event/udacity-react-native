@@ -1,11 +1,9 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Text, View } from 'react-native'
 import { useSelector } from 'react-redux'
-import ListCustomer from '../../../features/customer/List'
-import GlobalStyles from '../../../styles'
-import SelectRegion from './SelectRegion'
 import { ListRegion } from '../../../constants/region'
 import EditCustomer from '../../../features/customer/Edit'
+import ListCustomer from '../../../features/customer/List'
+import SelectRegion from '../../../features/region/List'
 
 const Stack = createNativeStackNavigator()
 

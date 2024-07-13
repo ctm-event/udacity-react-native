@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from "@react-navigation/native"
 import {
   Modal,
   Pressable,
@@ -7,10 +7,10 @@ import {
   StyleSheet,
   Text,
   View
-} from 'react-native'
-import GlobalStyles from '../../styles'
-import { clear } from '../../utilities/async_storage'
-import { useState } from 'react'
+} from "react-native"
+import GlobalStyles from "../../styles"
+import { clear } from "../../utilities/async_storage"
+import { useState } from "react"
 
 const Setting = () => {
   const [modalVisible, setModalVisible] = useState(false)
@@ -33,7 +33,7 @@ const Setting = () => {
             presentationStyle="overFullScreen"
             visible={modalVisible}
             onRequestClose={() => {
-              Alert.alert('Modal has been closed.')
+              Alert.alert("Modal has been closed.")
               setModalVisible(!modalVisible)
             }}
           >
@@ -41,9 +41,9 @@ const Setting = () => {
               style={[
                 styles.centeredView,
                 {
-                  flexBasis: '100%',
-                  justifyContent: 'center',
-                  backgroundColor: 'rgba(0, 0, 0, 0.8)'
+                  flexBasis: "100%",
+                  justifyContent: "center",
+                  backgroundColor: "rgba(0, 0, 0, 0.8)"
                 }
               ]}
             >
@@ -68,28 +68,28 @@ export default Setting
 
 const styles = StyleSheet.create({
   wrapper: {
-    justifyContent: 'center',
+    justifyContent: "center",
     ...GlobalStyles.screenWrapper
   },
   primaryButton: {
-    textAlign: 'center',
-    display: 'block',
-    border: '1px solid #ff0008',
-    padding: '1rem',
-    borderRadius: '0.25rem',
-    backgroundColor: '#ff0008',
-    color: '#fff',
-    fontSize: '1rem',
-    fontWeight: 500,
-    with: '100%'
+    textAlign: "center",
+    display: "block",
+    border: "1px solid #ff0008",
+    padding: 16,
+    borderRadius: 4,
+    backgroundColor: "#ff0008",
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "500",
+    with: "100%"
   },
   modalView: {
     margin: 20,
-    backgroundColor: 'white',
-    borderRadius: '0.25rem',
+    backgroundColor: "white",
+    borderRadius: 4,
     padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
+    alignItems: "center",
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2
@@ -104,18 +104,18 @@ const styles = StyleSheet.create({
     elevation: 2
   },
   buttonOpen: {
-    backgroundColor: '#F194FF'
+    backgroundColor: "#F194FF"
   },
   buttonClose: {
-    backgroundColor: '#2196F3'
+    backgroundColor: "#2196F3"
   },
   textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center'
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
   },
   modalText: {
     marginBottom: 15,
-    textAlign: 'center'
+    textAlign: "center"
   }
 })

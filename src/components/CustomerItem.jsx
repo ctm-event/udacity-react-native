@@ -4,9 +4,9 @@ import {
   Text,
   TouchableOpacity,
   View
-} from 'react-native'
+} from "react-native"
 
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ionicons from "react-native-vector-icons/Ionicons"
 
 export const CustomerItem = ({ customer, onPress }) => {
   const { id, name, age, region } = customer
@@ -29,21 +29,21 @@ export const CustomerItem = ({ customer, onPress }) => {
 
 const styles = StyleSheet.create({
   customerItem: {
-    rowGap: '0.5rem',
+    rowGap: "0.5rem",
     borderRadius: 4,
     padding: 16,
     margin: 8,
-    backgroundColor: 'lightyellow',
-    border: '1px solid darkgoldenrod'
+    backgroundColor: "lightyellow",
+    border: "1px solid darkgoldenrod"
   },
   line: {
-    borderBottomColor: '#ccc',
-    borderBottomWidth: '1px',
-    paddingBottom: '0.4rem'
+    borderBottomColor: "#ccc",
+    borderBottomWidth: "1px",
+    paddingBottom: "0.4rem"
   },
   edit: {
-    position: 'absolute',
-    top: '0.5rem',
-    right: '0.5rem'
+    position: "absolute",
+    top: "0.5rem",
+    right: "0.5rem"
   }
 })

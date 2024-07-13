@@ -1,29 +1,29 @@
 const styles = () => {
   return {
     container: {
-      margin: '1rem'
+      margin: 16
     },
     submitButton: {
-      borderRadius: '10px'
+      borderRadius: 10
     },
     form: {
-      rowGap: '1rem'
+      rowGap: 16
     },
     button: {
-      alignItems: 'center',
-      justifyContent: 'center',
+      alignItems: "center",
+      justifyContent: "center",
       paddingVertical: 12,
       paddingHorizontal: 32,
       borderRadius: 4,
       elevation: 3,
-      backgroundColor: '#ff0008'
+      backgroundColor: "#ff0008"
     },
     text: {
       fontSize: 16,
       lineHeight: 21,
-      fontWeight: '500',
+      fontWeight: "500",
       letterSpacing: 0.25,
-      color: 'white'
+      color: "white"
     }
   }
 }

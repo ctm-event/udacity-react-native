@@ -24,10 +24,13 @@ const slice = createSlice({
       state.list = payload
     },
     updateCustomer: (state, { payload }) => {
-      state.list = state.list.map((customer) => {
-        if (customer.id === payload.id) return payload
-        return customer
-      })
+      //
+    },
+    updateCustomerResult: (state, { payload }) => {
+      state.list = payload
+    },
+    updateCustomerError: (state, { payload }) => {
+      console.log(payload)
     }
   }
 })
@@ -38,7 +41,9 @@ export const {
   createCustomerError,
   loadCustomers,
   loadCustomersResult,
-  updateCustomer
+  updateCustomer,
+  updateCustomerResult,
+  updateCustomerError
 } = slice.actions
 
 export default slice.reducer

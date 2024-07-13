@@ -13,8 +13,8 @@ export function* takeLoadCustomers() {
     const customers = yield get(CUSTOMER_KEY)
 
     console.log(customers)
-    yield delay(1000)
-    yield put(actions.loadCustomersResult(customers))
+    yield delay(500)
+    yield put(actions.loadCustomersResult(customers || []))
   } catch (error) {
     yield put(actions.loadCustomersResult([]))
   }

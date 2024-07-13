@@ -18,7 +18,7 @@ export function* takeCreateCustomer({ payload }) {
     }
 
     // pretend call to API
-    yield delay(1000)
+    yield delay(500)
     
     console.log('Finish calling API')
     

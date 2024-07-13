@@ -15,10 +15,8 @@ const NewCustomner = () => {
   const styles = StyleSheet.create(formStyles())
 
   const onSubmit = (formData) => {
-    console.log('dispatch(createCustomer())')
     dispatch(createCustomer(formData))
-    // dispatch(addCustomer(formData))
-    // navigate('Select Region')
+    navigate('Select Region')
   }
 
   return (

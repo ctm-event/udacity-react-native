@@ -118,7 +118,7 @@ const TimerNotification = () => {
             ]}
           >
             <View style={styles.modalView}>
-              <Text style={styles.modalText}>Storage has been cleared</Text>
+              <Text style={styles.modalText}>Notification has been scheduled</Text>
               <Pressable
                 style={styles.primaryButton}
                 onPress={() => setModalVisible(!modalVisible)}

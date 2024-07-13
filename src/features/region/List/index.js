@@ -1,11 +1,9 @@
-import { StyleSheet, Text, View } from "react-native"
-import { useSelector } from "react-redux"
-import GlobalStyles from "../../../styles"
-import { useNavigation } from "@react-navigation/native"
-import { ListRegion } from "../../../constants/region"
+import { useNavigation } from '@react-navigation/native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { ListRegion } from '../../../constants/region'
+import GlobalStyles from '../../../styles'
 
 const SelectRegion = () => {
-  const { list } = useSelector((state) => state.customer)
   const { navigate } = useNavigation()
 
   const component =
@@ -13,14 +11,13 @@ const SelectRegion = () => {
       <View style={styles.regionWrapper}>
         {ListRegion.map((region) => (
           <View key={region} style={styles.regionItem}>
-            <Text
-              style={styles.regionText}
-              onClick={() => {
+            <Pressable
+              onPress={() => {
                 navigate(region)
               }}
             >
-              {region}
-            </Text>
+              <Text style={styles.regionText}>{region}</Text>
+            </Pressable>
           </View>
         ))}
       </View>
@@ -38,21 +35,21 @@ export default SelectRegion
 const styles = StyleSheet.create({
   regionWrapper: {
     margin: 16,
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: "0.5rem",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+    justifyContent: 'space-between'
   },
   regionItem: {
-    flexBasis: "48%",
-    backgroundColor: "lightyellow",
-    border: "1px solid darkgoldenrod",
-    padding: "0.5rem",
+    flexBasis: '48%',
+    backgroundColor: 'lightyellow',
+    border: '1px solid darkgoldenrod',
+    padding: 8,
     borderRadius: 4,
-    justifyContent: "center"
+    justifyContent: 'center'
   },
   regionText: {
-    fontWeight: "400",
-    color: "dimgrey"
+    fontWeight: '400',
+    color: 'dimgrey'
   }
 })

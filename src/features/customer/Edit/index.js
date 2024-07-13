@@ -24,7 +24,7 @@ const EditCustomer = () => {
   }
 
   return (
-    <View style={{ margin: '1rem' }}>
+    <View style={{ margin: 16 }}>
       <CustomerForm onSubmit={onSubmit} customer={customer} />
     </View>
   )

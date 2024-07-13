@@ -15,7 +15,7 @@ const ListCustomer = ({ route: { params } }) => {
 
   return (
     <SafeAreaView>
-      <ScrollView style={GlobalStyle.screenWrapper}>
+      <View style={GlobalStyle.screenWrapper}>
         {customersInRegion.length > 0 ? (
           <FlatList
             data={customersInRegion}
@@ -31,7 +31,7 @@ const ListCustomer = ({ route: { params } }) => {
         ) : (
           <Text>There is no customer in this region</Text>
         )}
-      </ScrollView>
+      </View>
     </SafeAreaView>
   )
 }

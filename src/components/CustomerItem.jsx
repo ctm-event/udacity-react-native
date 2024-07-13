@@ -1,9 +1,7 @@
 import {
-  Pressable,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  View
+  TouchableOpacity
 } from "react-native"
 
 import Ionicons from "react-native-vector-icons/Ionicons"
@@ -20,7 +18,7 @@ export const CustomerItem = ({ customer, onPress }) => {
       <Ionicons
         style={styles.edit}
         name="create-outline"
-        size="1.5rem"
+        size={24}
         color="darkgoldenrod"
       />
     </TouchableOpacity>
@@ -29,7 +27,7 @@ export const CustomerItem = ({ customer, onPress }) => {
 
 const styles = StyleSheet.create({
   customerItem: {
-    rowGap: "0.5rem",
+    rowGap: 8,
     borderRadius: 4,
     padding: 16,
     margin: 8,
@@ -38,12 +36,12 @@ const styles = StyleSheet.create({
   },
   line: {
     borderBottomColor: "#ccc",
-    borderBottomWidth: "1px",
-    paddingBottom: "0.4rem"
+    borderBottomWidth: 1,
+    paddingBottom: 6
   },
   edit: {
     position: "absolute",
-    top: "0.5rem",
-    right: "0.5rem"
+    top: 8,
+    right: 8
   }
 })

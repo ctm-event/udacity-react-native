@@ -9,7 +9,6 @@ const Tab = createBottomTabNavigator()
 const Navigation = () => {
   return (
     <Tab.Navigator
-      lazy={false}
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, size, color }) => {
           let iconName
@@ -24,7 +23,8 @@ const Navigation = () => {
         },
         tabBarActiveTintColor: '#ff0008',
         tabBarInactiveTintColor: '#ccc',
-        headerShown: false
+        headerShown: false,
+        lazy: false
       })}
     >
       <Tab.Screen name="Regions" component={RegionStacks} options={{
